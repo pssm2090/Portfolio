@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --primary-background-color: #13005a;
+    --secondary-background-color: #00337c;
+    --primary-text-color: #f0efef;
+    --secondary-text-color: #8892b0;
+    --highlight-color: #03c988;
+    --primary-font:Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --secondary-font:"SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    line-height: 1.8rem;
+}
+
+a{
+    text-decoration: none;/*underline asbe na*/
+     display: inline-block;/*ekta sesh hole r ekta anochor tag chaile rakhte parbo ba onno jinis rakhte parbo, r width define korte parbo*/
+}
+ul{
+    list-style: none;
+}
+div{
+    display: inline-block;
+}
+/*-------------------------------------------- */
+.outerarea{
+    background: linear-gradient(to top left, var(--primary-background-color), var(--secondary-background-color));
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 1 1; */
+    position: relative;
+
+}
+.box{
+    width: 50rem;
+    height: 32rem;
+    position: absolute;
+    left: 20rem;
+    transform: translateY(20%);
+    /* background-color: #4326ab0f; */
+    background: linear-gradient(to top left, var(--primary-background-color), var(--secondary-background-color));/*#13005a*/
+    box-shadow: 2px 2px 5px #0a012c;
+    /* backdrop-filter: blur(60px); */
+    border-radius: 8px;
+}
+
+/*header---------------------------------------*/
+.logo{
+    width: 90px;
+    position: relative;
+    top: 10px;
+    margin: 15px;
+    transition: all 0.25s ease-in-out;
+}
+.logo:hover{
+    border-radius: 45px;
+    border: 1.8px solid goldenrod;
+    cursor: pointer;
+}
+.resume-ribbon{
+    color: #bbc3dc;
+    position: absolute;
+    width: 45px;
+    height: 170px;
+    background-color: #c71313;
+    right: 30px;
+    top: -30px;
+    transform: rotate(-45deg);
+    box-shadow: -1px -1px 1px black;
+    transition: color 2s ease-in-out;
+}
+.resume-word{
+    /* width: 225px;
+    position: absolute;
+    top: 120px;
+    left: -90px; */
+    /* height: 40px; */
+    position: absolute;
+    top: 60px;
+    left: -33px;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    font-size: 27px;
+    color: white;
+    /* box-shadow: 1px 1px 1px rgb(85, 12, 12); */
+}
+.resume-ribbon::after{
+    content: "";
+    position: absolute;
+    top: -44px;
+    right: 0px;
+    border-left: 23px solid #c71313;
+    border-right: 23px solid transparent;
+    border-top: 23px solid transparent;
+    border-bottom: 23px solid #c71313;
+}
+.resume-ribbon::before{
+    content: "";
+    position: absolute;
+    bottom: -44px;
+    right: 0px;
+    border-left: 23px solid #c71313;
+    border-right: 23px solid transparent;
+    border-top: 23px solid #c71313;
+    border-bottom: 23px solid transparent;
+}
+.resume-word::after{
+    content: "";
+    position: absolute;
+    top: 28px;
+    right: 150px;
+    border-left: 10px solid #c71313;
+    border-right: 10px solid #740707;
+    border-top: 10px solid #c71313;
+    border-bottom: 10px solid #740707;
+    transform: rotate(45deg);
+}
+.resume-word::before{
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 170px;
+    border-left: 10px solid #c71313;
+    border-right: 10px solid #740707;
+    border-top: 10px solid #c71313;
+    border-bottom: 10px solid #740707;
+    transform: rotate(45deg);
+}
+.resume-word:hover{
+    text-shadow: 1px 1px 1px black;
+    color: #f7f98d;
+    cursor: pointer;
+}
+/*main----------------------------------------*/
+.line-1{
+    font-family:var(--secondary-font); 
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+}
+.line-2{
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+.line-3{
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+}
+.line-4{
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+.blink1{
+    font-size: 1.8rem;
+    animation: blink1 2s linear infinite;
+}
+.blink2{
+    font-size: 1.8rem;
+    animation: blink2 1.5s linear infinite;
+}
+.blink3{
+    font-size: 1.8rem;
+    animation: blink1 1s linear infinite;
+}
+@keyframes blink1{
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+@keyframes blink2{
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+@keyframes blin3{
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+.content{
+    /* position: relative;
+    top: 20px;
+    left: 50px; */
+    width: 44rem;
+    margin: 2rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    line-height: 5rem;
+}
+.sites{
+    width: 3.2rem;
+    border-radius: 1.6rem;
+    margin: 0.5rem;
+    margin-right: 4em;
+
+    /* position: absolute; */
+    transition: all 0.2s ease-in-out;
+}
+.github{
+    position: absolute;
+    bottom: 140px;
+    left: 730px;
+}
+.linkedin{
+    position: absolute;
+    bottom: 80px;
+    left: 730px;
+}
+.insta{
+    position: absolute;
+    bottom: 20px;
+    left: 730px;
+}
+.sites:hover{
+    border: 1px solid rgb(238, 207, 30);
+    cursor: pointer;
+}
+.linkedin:hover{
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+.form{
+    color: white;
+    display: inline-block;
+    width: 500px;
+    height: 30px;
+    border: none;
+    border-bottom: 0.1px solid #8aade1;
+    background: none;
+    outline: none;
+}
+.form-content{
+    line-height: 4rem;
+}
+.form:hover{
+    background-color: #0a0064;
+    cursor: pointer;
+    outline: none;
+    color: aliceblue;
+}
+input::placeholder,textarea::placeholder{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+    width: 100px;
+    height: 25px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #060039;
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    font-weight: bold;
+    color: #00337c;
+    transition: all linear 0.3s;
+}
+button:hover{
+    transform: translateY(-0.25em);
+    background-color: #77ffff;
+    color: rgb(0, 29, 55);
+    border: 2px solid rgb(0, 40, 75);
+    cursor: pointer;
+}
+.mail{
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+    transition: all linear 0.1s;
+}
+.mail:hover{
+    color: aliceblue;
+    text-shadow: 1px 1px rgb(26, 0, 0);
+    cursor: pointer;
+}
+
+/*footer kichu kichu er jonno------------------------------------*/
+.next{
+    width: 40px;
+    height: 20px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transition: all 0.1s;
+}
+.next::after{
+    content: "";
+    position: absolute;
+    bottom: -90px;
+    left: -65px;
+    transform: translateY(50%);
+    border-left: 80px solid #3162a6;
+    border-right: 80px solid transparent;
+    border-top: 80px solid #3162a6;
+    border-bottom: 80px solid transparent;
+    border-radius: 100%;
+    box-shadow: -3px -2px 1px #050040;
+    transform: rotate(45deg);
+}
+.next:hover,.pre:hover{
+    transform: scale(0.95);
+    text-shadow: 3px 3px 2px #0c2a54;
+    cursor: pointer;
+}
+.word{
+    display: inline-block;
+    color: aliceblue;
+    font-size: 30px;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+}
+.home{
+    left: -18px;
+    top: 0px;
+}
+.work-up{
+    left: -18px;
+    top: 0px;
+}
+.work-down{
+    left: -17px;
+    top: -20px;
+}
+.contact{
+    left: -42px;
+    top: -20px;
+}
+
+.pre{
+    width: 40px;
+    height: 20px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transition: all 0.1s;
+}
+.pre::after{
+    content: "";
+    position: absolute;
+    top: -90px;
+    left: -65px;
+    transform: translateY(50%);
+    border-left: 80px solid transparent;
+    border-right: 80px solid #3162a6;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid #3162a6;
+    border-radius: 100%;
+    box-shadow: 3px 2px 1px #050040;
+    transform: rotate(45deg);
+}
+
